@@ -1,25 +1,18 @@
 @description ReaSonus Native
 @author Navelpluisje
-@version 0.2.0
+@version 0.7.0
 @changelog
   # What's Changed
 
-  ## All devices
-
-  * Better dialog handling via actions. Show meassage when dialog not supported for installed device
-
   ## FaderPort 8/16
 
-  * Added Master Fader Mode with plugin control
-  * Added Master Fader Automation
-  * Fixed issue with wrong assigned solo buttons on FP16
-
-  ## FaderPort V2
-
-  * Added separate action for functions dialog
-  * Disable fader and controls when no track selected
-  * Make all the track buttons work on master track as well
-  * Added option to select and control hidden selected tracks
+  - Fixed issue with wrong time code when `Use ruler time unit` was selected.
+  - Added the abilty to uninvert labels for the plugin mapping. This is a drop down select on the plugin Mapping page in the ReaSonus Control Panel.
+  - Added option to set the scroll size for controlling plugins. This can be set in 3 ways:
+    - In the ReaSonus Control panel under the Plugin Control tab
+    - In the on-device menu
+    - When controlling a plugin, press the Pan/Param encoder. The first display will show the step size. Set the step size with the encoder and click the encoder again to save the value
+  - When selecting a track in REAPER and this track is already visible on the FaderPort, it will not change the tracks on the FaderPort. If teh track is not visible on the device, it will scroll with bank-size steps.
 
   Thanx to anyone reporting issues and help me debug them.
 @provides
@@ -27,6 +20,7 @@
   [win64] reaper_ReasonusNative-x64.dll https://github.com/navelpluisje/Reasonus-Native/releases/download/$version/reaper_ReasonusNative-x64.dll
   [win32] reaper_ReasonusNative-x86.dll https://github.com/navelpluisje/Reasonus-Native/releases/download/$version/reaper_ReasonusNative-x86.dll
   [darwin64] reaper_ReasonusNative-arm64-x86_64.dylib https://github.com/navelpluisje/Reasonus-Native/releases/download/$version/reaper_ReasonusNative-arm64-x86_64.dylib
+  ReaSonus/en-US.ini https://github.com/navelpluisje/Reasonus-Native/releases/download/$version/en-US.ini
 @link
   Documentation https://navelpluisje.github.io/reasonus/
   Report Issue https://github.com/navelpluisje/Reasonus-Native/issues
